@@ -3,8 +3,6 @@
 <!-- DELL U2518D -->
 <plist version="1.0">
 <dict>
-  <key>DisplayProductName</key>
-  <string>DELL U2518D</string>
   <key>DisplayProductID</key>
   <integer>16698</integer>
   <key>DisplayVendorID</key>
