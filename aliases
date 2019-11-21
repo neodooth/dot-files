@@ -9,6 +9,9 @@ alias ds="du -sh"
 alias da="du -sh *"
 
 # programs
+alias ma="make all"
+alias mca="make clean && make all"
+alias gas="./gradlew assemble"
 alias s="source"
 alias g="grep"
 alias gv="grep -v"
@@ -21,10 +24,10 @@ alias act="source bin/activate"
 alias vact="source venv/bin/activate"
 alias dea="deactivate"
 alias gv="grep -v"
-alias pg="ps -ax|grep"
+alias pg="ps aux|grep"
+alias ak="grep -v grep|awk '{print \$2}'|xargs kill"
 alias k="kill"
 alias k9="kill -9"
-alias ak="grep -v grep|awk '{print \$1}'|xargs kill"
 alias mv="mv -i"
 
 # tmux
@@ -43,3 +46,4 @@ alias tf="tail -f"
 alias h="head"
 alias hn="head -n"
 alias h1="head -n 1"
+
