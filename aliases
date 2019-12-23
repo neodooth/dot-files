@@ -9,6 +9,7 @@ alias ds="du -sh"
 alias da="du -sh *"
 
 # programs
+alias jarp="jar -tf"
 alias ma="make all"
 alias mca="make clean && make all"
 alias gas="./gradlew assemble"
@@ -47,3 +48,28 @@ alias h="head"
 alias hn="head -n"
 alias h1="head -n 1"
 
+# git
+# alias ga='git add'
+# alias gb='git branch'
+# alias gbr='git branch --remote'
+# alias gc='git commit -v'
+# alias gcb='git checkout -b'
+# alias gcl='git clone --recurse-submodules'
+# alias gco='git checkout'
+# alias gd='git diff'
+# alias gds='git diff --staged'
+# alias gf='git fetch'
+# alias gfa='git fetch --all --prune'
+# alias gl='git pull'
+# alias glg='git log --stat'
+# alias glog='git log --oneline --decorate --graph'
+# alias gloga='git log --oneline --decorate --graph --all'
+# alias gp='git push'
+# alias gpd='git push --dry-run'
+# alias gr='git remote'
+# aliasgra='git remote add'
+# alias grm='git rm'
+# alias grmc='git rm --cached'
+# alias grv='git remote -v'
+# alias gss='git status -s'
+# alias gst='git status'
