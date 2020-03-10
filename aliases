@@ -1,4 +1,7 @@
 # dir
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 alias rmr="rm -r"
 alias ll="ls -la"
 alias l="ls -lh"
