@@ -10,7 +10,7 @@ alias lk="clear && ls *"
 alias lc="ls|wc -l"
 alias ds="du -sh"
 alias da="du -sh *"
-alias dsort="du -sm * | sort -nr"
+alias dsort="du -sm * .* | sort -nr"
 
 # programs
 alias jarp="jar -tf"
