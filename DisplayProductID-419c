@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>DisplayProductName</key>
+  <string>DELL U2719DC</string>
+  <key>DisplayProductID</key>
+  <integer>16796</integer>
+  <key>DisplayVendorID</key>
+  <integer>4268</integer>
+  <key>scale-resolutions</key>
+  <array>
+    <!-- 4352x2448 -->
+    <data>AAARAAAACZAAAAABACAAAA==</data>
+    <!-- 2176x1224 -->
+    <data>AAAIgAAABMgAAAABACAAAA==</data>
+    <!-- 4096x2304 -->
+    <data>AAAQAAAACQAAAAABACAAAA==</data>
+    <!-- 2048x1152 -->
+    <data>AAAIAAAABIAAAAABACAAAA==</data>
+    <!-- 3840x2160 -->
+    <data>AAAPAAAACHAAAAABACAAAA==</data>
+    <!-- 1920x1080 -->
+    <data>AAAHgAAABDgAAAABACAAAA==</data>
+  </array>
+</dict>
+</plist>
