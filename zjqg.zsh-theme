@@ -1,36 +1,30 @@
 # ZSH theme based on avit and michelebologna
 
-PROMPT='
-$(_user_host)${_current_dir}$(git_prompt_info)$(git_prompt_status)$(git_remote_status)
-${_return_status}❯%{$fg[$CARETCOLOR]%}%{$resetcolor%} '
+CARET="❯"
+CARETCOLOR="magenta"
+ME=""
+DIRCOLOR="blue"
+if [[ -n $SSH_CONNECTION ]]; then
+  CARET="%#"
+  CARETCOLOR="cyan"
+  ME="%m "
+  DIRCOLOR="white"
+elif [[ $LOGNAME != $USER ]]; then
+  CARET="%#"
+  CARETCOLOR="yellow"
+  ME="%n%m "
+  DIRCOLOR="white"
+fi
 
-PROMPT2='❮%{$fg[$CARETCOLOR]%}%{$reset_color%} '
+PROMPT='
+%{$fg[white]%}(%D %*) <%?> ${_current_dir}$(git_prompt_info)$(git_prompt_status)$(git_remote_status)
+${_return_status}$ME$CARET%{$reset_color%} '
 
 RPROMPT=''
 
-local _current_dir="%{$fg[blue]%}%3~%{$reset_color%} "
-local _return_status="%(?.%{$fg[magenta]%}.%{$fg[red]%})"
+local _current_dir="%{$fg[$DIRCOLOR]%}%~%{$reset_color%} "
+local _return_status="%(?.%{$fg[$CARETCOLOR]%}.%{$fg[red]%})"
 local _hist_no="%{$fg[grey]%}%h%{$reset_color%}"
-
-function _current_dir() {
-  local _max_pwd_length="65"
-  if [[ $(echo -n $PWD | wc -c) -gt ${_max_pwd_length} ]]; then
-    echo "%{$fg[blue]%}%-2~ ... %3~%{$reset_color%} "
-  else
-    echo "%{$fg%(?..%{$fg[red]%})[blue]%}%~%{$reset_color%} "
-  fi
-}
-
-function _user_host() {
-  if [[ -n $SSH_CONNECTION ]]; then
-    me="%n@%m"
-  elif [[ $LOGNAME != $USER ]]; then
-    me="%n"
-  fi
-  if [[ -n $me ]]; then
-    echo "%{$fg[cyan]%}$me%{$reset_color%}:"
-  fi
-}
 
 function _vi_status() {
   if {echo $fpath | grep -q "plugins/vi-mode"}; then
@@ -67,14 +61,6 @@ function _git_time_since_commit() {
     echo "$color$commit_age%{$reset_color%}"
   fi
 }
-
-if [[ $USER == "root" ]]; then
-  CARETCOLOR="red"
-else
-  CARETCOLOR="white"
-fi
-
-MODE_INDICATOR="%{$fg[yellow]%}❮%{$reset_color%}%{$fg[yellow]%}❮❮%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
