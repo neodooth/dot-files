@@ -52,7 +52,7 @@ alias tf="tail -f"
 alias h="head"
 alias hn="head -n"
 alias h1="head -n 1"
-alias countuniq="sort | uniq -c"
+alias countuniq="sort | uniq -c | sort -nr"
 
 # git
 # alias ga='git add'
